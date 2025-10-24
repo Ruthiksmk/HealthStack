@@ -1,0 +1,24 @@
+.notifications-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.notifications-container h2 {
+  font-size: 1.5rem;
+  color: #007b83;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.notification-item {
+  background: #eaf8f6;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.4;
+}

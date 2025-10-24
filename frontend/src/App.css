@@ -1,0 +1,1458 @@
+/* General Body & Font Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb; /* Lighter gray background */
+}
+
+/* Header Styles */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 2rem;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  padding: 0.25rem;
+  padding-left: 1rem;
+  border: 1px solid #e5e7eb;
+  width: 350px;
+}
+
+.header-search input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.header-search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #ec4899;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.header-search button:hover {
+  background-color: #d94682;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* increased gap for better spacing */
+  margin-left: auto;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem; /* more gap between links */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Navigation links */
+.header-nav a {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem; /* slightly larger for breathing room */
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: transparent;
+  color: #111827;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.header-nav a:hover {
+  background-color: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+/* Button inside header-nav */
+.header-nav button {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000; /* black border */
+  cursor: pointer;
+  font-weight: 500;
+  background-color: transparent;
+  color: #111827;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.header-nav button:hover {
+  background-color: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+/* Optional highlighted button (e.g., Sign Up) */
+.header-nav .btn-signup {
+  border-color: #000;
+}
+
+
+/* 
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover {
+  color: #111827;
+} */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.header-actions button {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-signup {
+  background-color: transparent;
+  color: #111827;
+}
+
+.btn-signup:hover {
+  background-color: #f3f4f6;
+}
+
+.btn-login {
+  background-color: #111827;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #374151;
+}
+
+/* Main Content Styles */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0;
+}
+
+.dashboard-header p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Date Picker and Seed Button Styles */
+.date-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.date-picker {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-seed {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-seed:hover {
+  background-color: #059669;
+}
+
+
+/* Grid for Tracker Cards */
+.trackers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Individual Tracker Card Styles */
+.tracker-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tracker-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.card-body p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Styles for controls inside cards */
+.hydration-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.hydration-controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.hydration-controls button:hover {
+  background-color: #f3f4f6;
+}
+
+.hydration-controls .count {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #2563eb;
+  min-width: 60px;
+  text-align: center;
+}
+
+.activity-form, .sleep-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.activity-form .form-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tracker-card input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  box-sizing: border-box; /* Important for consistent sizing */
+}
+
+.tracker-card button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tracker-card button:hover {
+  background-color: #1d4ed8;
+}
+
+.total-display {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #4b5563;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.total-display span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #1f2937;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.activity-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.875rem;
+}
+.activity-list li:last-child {
+    border-bottom: none;
+}
+.activity-list .description {
+    color: #374151;
+}
+.activity-list .duration {
+    color: #1f2937;
+    font-weight: 500;
+}
+
+
+/* Weekly Review Section */
+.weekly-review {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.weekly-review h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.review-table th, .review-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.review-table th {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.review-table td {
+  color: #374151;
+}
+
+.review-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.time-selection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+/* --- Add this to the bottom of App.css --- */
+
+.confirmation-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+
+.confirmation-details li {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confirmation-details li:last-child {
+  border-bottom: none;
+}
+
+.confirmation-details .label {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.confirmation-details .value {
+  font-weight: 600;
+  color: #1f2937;
+  text-align: right;
+}
+/* --- Add this to the bottom of App.css --- */
+
+.appointments-list-container {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.appointments-table th {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.appointments-table td {
+  color: #374151;
+  vertical-align: top;
+}
+
+.appointments-table tr:last-child td {
+  border-bottom: none;
+}
+/* --- Add this to the bottom of App.css --- */
+
+.appointments-list-container {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.appointments-table th {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.appointments-table td {
+  color: #374151;
+  vertical-align: middle;
+}
+
+.appointments-table tr:last-child td {
+  border-bottom: none;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-accepted {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-declined {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+}
+
+.btn-accept {
+    background-color: #10b981;
+}
+.btn-accept:hover {
+    background-color: #059669;
+}
+
+.btn-decline {
+    background-color: #ef4444;
+}
+.btn-decline:hover {
+    background-color: #dc2626;
+}
+.login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #e0f7fa, #e1f5fe);
+}
+
+.login-box {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 350px;
+}
+
+.login-box h1 {
+  margin-bottom: 0.5rem;
+  color: #00796b;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.btn-login,
+.btn-signup {
+  flex: 1;
+  margin: 0 0.5rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-login {
+  background-color: #00796b;
+}
+
+.btn-signup {
+  background-color: #0288d1;
+}
+
+.btn-login:hover {
+  background-color: #00695c;
+}
+
+.btn-signup:hover {
+  background-color: #0277bd;
+}
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f3f4f6;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+}
+
+.login-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.role-selection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.error-msg {
+  background: #ffe5e5;
+  color: #b00020;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.success-msg {
+  background: #e5ffe5;
+  color: #008a00;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.link-btn {
+  background: none;
+  color: #0077cc;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.error-box {
+  background: #ffe6e6;
+  color: red;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-toggle {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* --- General Page Layout --- */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Login Layout --- */
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 360px;
+  transition: all 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-4px);
+}
+
+.login-box h1 {
+  color: #00796b;
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.login-box p {
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.login-box input:focus {
+  border-color: #009688;
+  box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.1);
+}
+
+/* Buttons */
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-box button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  width: 48%;
+  transition: all 0.3s ease;
+}
+
+.btn-patient {
+  background-color: #009688;
+}
+
+.btn-patient:hover {
+  background-color: #00796b;
+}
+
+.btn-doctor {
+  background-color: #007bff;
+}
+
+.btn-doctor:hover {
+  background-color: #0056b3;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+/* success message */
+.success-msg {
+  background-color: #e6ffed;
+  color: #117a3d;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  border: 1px solid rgba(17,122,61,0.08);
+}
+
+/* reuse .login-box and related from earlier for consistent look */
+/* ensure .link-btn exists (used on register page) */
+.link-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* register form specific small tweaks */
+.register-form select {
+  background: white;
+  font-size: 14px;
+}
+
+/* make sure inputs inside register form match login styling */
+.register-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.register-form input:focus {
+  border-color: #009688;
+  box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.08);
+}
+/* --- General Form Card Layout --- */
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f6f8fa;
+}
+
+.login-box {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #004d40;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.register-form input:focus {
+  border-color: #009688;
+  box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.1);
+}
+
+/* --- Dropdown + Button Alignment --- */
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.form-row select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 15px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.btn-register {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #00695c;
+}
+
+/* --- Link Button --- */
+.link-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* --- Messages --- */
+.error-message {
+  color: #d32f2f;
+  background: #fdecea;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.success-msg {
+  color: #2e7d32;
+  background: #e8f5e9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+/* --- Register Page Text & Link --- */
+.register-form p {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Keep link inline and subtle */
+.link-btn {
+  background: none;
+  border: none;
+  color: #00796b;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Smooth hover — color change only */
+.link-btn:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* Prevent the button from shifting layout on click */
+.link-btn:focus {
+  outline: none;
+}
+.link-btn {
+  font-size: 14px;
+  color: #00897b;
+}
+/* === Dashboard Polish === */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #022c22;
+}
+
+.dashboard-header p {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.date-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-seed {
+  background-color: #059669;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-seed:hover {
+  background-color: #047857;
+}
+
+/* === Trackers === */
+.trackers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tracker-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+  padding: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tracker-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+}
+
+.card-header h2 {
+  font-size: 1.25rem;
+  color: #065f46;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-body p {
+  color: #475569;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.hydration-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.hydration-controls button {
+  background: #2563eb;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hydration-controls button:hover {
+  background: #1d4ed8;
+}
+.count {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+/* === Weekly Review Table === */
+.weekly-review {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.review-table th, .review-table td {
+  text-align: left;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.review-table th {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.review-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.review-table tr:hover {
+  background-color: #e0f2fe;
+  transition: 0.2s ease;
+}
+
+.total-display {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: right;
+}
+
+.progress-bar {
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background: #0ea5e9;
+  transition: width 0.3s ease;
+}
+/* Emergency / SOS panel */
+.sos-panel {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.sos-add-form { display:flex; gap:8px; }
+.sos-add-form input { flex:1; padding:8px; border-radius:6px; border:1px solid #ddd; }
+.sos-add-form button { padding:8px 12px; border-radius:6px; background:#00796b; color:#fff; border:none; cursor:pointer; }
+.sos-contact-list { list-style:none; margin:8px 0 0; padding:0; }
+.sos-contact-list li { display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px dashed #eee; }
+.sos-contact-list .small { background:transparent; border:none; color:#e53935; cursor:pointer; }
+
+/* Floating SOS button */
+.floating-sos {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e53935;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 8px 24px rgba(229,57,53,0.35);
+  cursor: pointer;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.floating-sos:disabled { opacity: 0.7; cursor: not-allowed; }
+.sos-panel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sos-add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sos-add-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.sos-add-form button {
+  background: #1976d2;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sos-contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sos-contact-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #f7f7f7;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.floating-sos {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+/* 🌟 Emergency Contacts UI Styling */
+
+.emergency-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.emergency-container h2 {
+  color: #e63946;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.emergency-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.emergency-input input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.emergency-input input:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 4px rgba(230, 57, 70, 0.4);
+}
+
+.emergency-input button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.emergency-input button:hover {
+  background-color: #d62828;
+  transform: scale(1.03);
+}
+
+.emergency-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emergency-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.emergency-list button {
+  background: #ffb3b3;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.emergency-list button:hover {
+  background: #ff7070;
+  transform: scale(1.05);
+}
+
+.emergency-list span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+/* 🔴 SOS button (centered below) */
+.sos-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.sos-button-container button {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sos-button-container button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+/* 🔴 Floating SOS Button */
+.sos-floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.sos-floating-btn button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sos-floating-btn button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}

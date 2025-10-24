@@ -1,0 +1,78 @@
+.emergency-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.add-contact {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.add-contact input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-contact button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-contact button:hover {
+  background: #45a049;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.contact-list li {
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 6px 0;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.sos-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.sos-button:hover {
+  transform: scale(1.1);
+}
