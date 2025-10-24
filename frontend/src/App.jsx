@@ -14,10 +14,14 @@ function App() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  // ✅ Backend base URL (for production + local use)
+  const API_BASE_URL =
+    process.env.REACT_APP_API_URL || "http://localhost:3001";
+
   // --- LOGIN HANDLER ---
   const handleLogin = async (role) => {
     try {
-      const res = await fetch("http://localhost:3001/api/login", {
+      const res = await fetch(`${API_BASE_URL}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -78,7 +82,6 @@ function App() {
           <div className="register-link">
             Don’t have an account?{" "}
             <a onClick={() => setCurrentPage("register")}>Register here</a>
-            
           </div>
         </div>
       </div>
@@ -155,14 +158,15 @@ function App() {
                 </button>
               </li>
             )}
-              <li>
-                <button
-                  onClick={() => setCurrentPage("notifications")}
-                  className={currentPage === "notifications" ? "active" : ""}
-                >
-                  Notifications
-                </button>
-              </li>
+
+            <li>
+              <button
+                onClick={() => setCurrentPage("notifications")}
+                className={currentPage === "notifications" ? "active" : ""}
+              >
+                Notifications
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -189,7 +193,6 @@ function App() {
         {currentPage === "notifications" && (
           <Notifications userEmail={email} />
         )}
-
       </main>
     </div>
   );
