@@ -16,12 +16,12 @@ function App() {
 
   // ✅ Backend base URL (for production + local use)
   const API_BASE_URL =
-    process.env.REACT_APP_API_URL || "http://localhost:3001";
+    process.env.REACT_APP_API_URL || "https://healthstack-1.onrender.com";
 
   // --- LOGIN HANDLER ---
   const handleLogin = async (role) => {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/login`, {
+      const res = await fetch("https://healthstack-1.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
